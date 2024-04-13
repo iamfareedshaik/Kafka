@@ -16,7 +16,7 @@ const isRunning = () => {
   const client = new kafka.KafkaClient({
     kafkaHost: process.env.KAFKA_BOOTSTRAP_SERVERS,
   });
-  console.log(client);
+  console.log("client", client);
   const consumer = new kafka.Consumer(
     client,
     [{ topic: process.env.KAFKA_TOPIC }],
